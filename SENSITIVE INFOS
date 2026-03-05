@@ -1,0 +1,14 @@
+Step 1.   Subdomain enumeration.
+
+Step2.   Check common .log paths with using httpx. while read host; do
+echo "$host/app.log"
+echo "$host/error.log"
+echo "$host/access.log"
+echo "$host/debug.log"
+echo "$host/laravel.log"
+
+done < subdomains.txt | httpx -mc 200 -o livelogs.txt
+
+Step3.    
+
+grep for sensitive keywords inside downloaded logs.    Cat livelongs.txt | grep “password, api_key, apikey, secret, token, ssh, "private key", error, exception, database, connection, user, email, credential, failure, unauthorized, warning, info, critical, fatal”
