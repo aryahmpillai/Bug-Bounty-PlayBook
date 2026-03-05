@@ -1,0 +1,66 @@
+("dev." OR "staging.") "*[nokia.com](http://nokia.com/)"
+
+site:iit.ac.in intitle:index.of.parent
+
+Example: site:iitk.ac.in intitle:index.of
+
+site:iit.ac.in ext:sql | ext:bak | ext:tar.gz
+
+Example: site:iitb.ac.in ext:sql
+
+site:iit.ac.in "api_key" | "api key" | "secret_key"
+
+Example: site:iitkgp.ac.in "api_key"
+
+site:iit.ac.in intitle:"student list" filetype:xls
+
+site:iit.ac.in intitle:"faculty directory" filetype:pdf
+
+Example: site:iitd.ac.in intitle:"student list" filetype:xls
+
+site:iit.ac.in intitle:"thesis" filetype:pdf
+
+site:iit.ac.in intitle:"research paper" filetype:pdf
+
+Example: site:iisc.ac.in intitle:"thesis" filetype:pdf
+
+site:iit.ac.in inurl:viewerframe?mode=
+
+site:iit.ac.in inurl:axis-cgi/jpg
+
+Example: site:iitb.ac.in inurl:viewerframe?mode=
+
+site:iit.ac.in inurl:.git
+
+Example: site:iitkgp.ac.in inurl:.git
+
+site:iit.ac.in intitle:"admin" inurl:admin
+
+Example: site:iitm.ac.in intitle:"admin" inurl:admin
+
+site:iit.ac.in ext:sql "INSERT INTO"
+
+Example: site:iitb.ac.in ext:sql "INSERT INTO"
+
+site:iit.ac.in inurl:wp-admin
+
+Example: site:iitd.ac.in inurl:wp-admin
+
+site:iit.ac.in ext:env DB_USERNAME
+
+Example: site:iitb.ac.in ext:env DB_PASSWORD
+
+site:iit.ac.in intitle:"index of" /backup
+
+Example: site:iitk.ac.in intitle:"index of" /backup
+
+Server-Side Processing Uploads (RCE Goldmine)
+These indicate background parsing, conversion, or execution.
+site:
+
+site:[http://domain.com](http://domain.com/) "File is being processed"
+site:[http://domain.com](http://domain.com/) "Your file is under review"
+site:[http://domain.com](http://domain.com/) "Parsing file"
+site:[http://domain.com](http://domain.com/) "Converting file"
+site:[http://domain.com](http://domain.com/) "File conversion started"
+site:[http://domain.com](http://domain.com/) "Upload successful, processing"
